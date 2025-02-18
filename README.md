@@ -127,3 +127,5 @@ Ce projet est distribué sous une licence **open source** garantissant que le co
 ---
 
 *Cupidon - La magie de la Saint-Valentin au service de l'amour et de la gestion intelligente des commandes de roses.*
+---
+*Généré par ChatGPT*
