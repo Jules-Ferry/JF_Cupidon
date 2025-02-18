@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+    <main>
+        <%- include("./partials/header.ejs") %>
+        <article class="content">
+            <div class="actions">
+                <button onclick="showDialog('orderRoses')">
+                    Passer une commande
+                </button>
+            </div>
+            <dialog id="orderRoses">
+                <div class="input-container">
+                    <input type="text" id="purchaserInputSearch" placeholder="Acheteur·rice·x" autocomplete="off">
+                    <ul class="dynamic-list" id="purchaserSearchList"></ul>
+                </div>
+                <input type="number" placeholder="Nombre de roses ?" min="0" max="5" name="flowersNumber" id="flowersNumber">
+                <br>
+                <select id="orderPaymentStatus">
+                    <option value="0">
+                        En attente de paiement
+                    </option>
+                    <option value="1">
+                        Payé
+                    </option>
+                    <option value="2">
+                        Gratuité
+                    </option>
+                </select>
+                <br>
+                <button type="submit" onclick="orderRoses()">
+                    Valider
+                </button>
+                <button onclick="closeDialog('orderRoses')" autofocus>
+                    Fermer
+                </button>
+            </dialog>
+            <dialog id="orderInformation">
+                <h2>
+                    Numéro de suivi
+                </h2>
+                <h3 id="trackingNumber" style="font-weight: 400;">
+                    WEB-00000000-00000
+                </h3>
+                <br>
+                <h2>
+                    Montant à réglé
+                </h2>
+                <h3 id="price" style="font-weight: 400;">
+                    0
+                </h3>
+                <button style="background-color: tomato;" onclick="closeDialog('orderInformation')">
+                    Fermer
+                </button>
+            </dialog>
+        </article>
+        <%- include("./partials/nav.ejs") %>
+    </main>
+    <script src="/assets/js/manage.js"></script>
+    <script>
+        document.querySelectorAll("button.<%= page.type %>")[0].classList.add("activated")
+        
+        initDynamicList("purchaserInputSearch", "purchaserSearchList", "/api/v1/registry/search", "/api/v1/registry/add")
+    </script>
+</body>
+</html>

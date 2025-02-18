@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="shortcut icon" href="/assets/img/icon.png" type="image/x-icon">
+    <meta property="og:title" content="JulesFerry · Cupidon">
+    <meta property="og:site_name" content="JulesFerry · Cupidon">
+    <meta property="og:url" content="<% url %>">
+    <meta property="og:description" content="Page d'erreur de Cupidon.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/img/icon.png" />
+    <meta name="theme-color" content="#C54317">
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+
+    <main>
+        <section class="logo">
+            <img style="width: 300px;" src="/assets/img/logo_panel.png">
+        </section>
+        <header class="error">
+            <article>
+                <i class="fas fa-times-circle"></i>
+                <br>
+                <h1>
+                    Erreur <%= error.code %>
+                </h1>
+                <p>
+                    <%= error.message %>
+                </p>
+            </article>
+        </header>
+        <section class="form">
+            <button onclick="document.location.href = '/'">
+                Retour à l'acceuil
+            </button>
+        </section>
+        <footer>
+            <p>
+                <%= school.name  %>
+            </p>
+            <p>
+                Conseil de vie Lycéenne du <%= school.name %>
+            </p>
+            <p>
+                Gilles Lazure (azures04)
+            </p>
+        </footer>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+[
+    {
+        "purchaser": "BOIS Julie (1GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-3Y8FQ"
+    },
+    {
+        "purchaser": "BOULARD Esteban (TGA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-OL1KK"
+    },
+    {
+        "purchaser": "PASQUET Guillaume (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-6XEXO"
+    },
+    {
+        "purchaser": "CLAUDEL Margaux (TGA)",
+        "status": "1",
+        "flowersNumber": "1",
+        "paymentStatus": "1",
+        "trackingNumber": "BVS-20250218-MPTGO"
+    },
+    {
+        "purchaser": "GRAND Pauline (TGA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-1UR63"
+    },
+    {
+        "purchaser": "PEREIRA Tony (TGA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-O4PZF"
+    },
+    {
+        "purchaser": "LAMBERT Arthur (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "1",
+        "trackingNumber": "BVS-20250218-JQQ5Q"
+    },
+    {
+        "purchaser": "DIDIER Fiona (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "0",
+        "trackingNumber": "BVS-20250218-KWXCB"
+    },
+    {
+        "purchaser": "FEVRIER Nicolas (2GA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "WEB-20250218-X6IMU"
+    },
+    {
+        "purchaser": "LATOUR Adele (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "1",
+        "trackingNumber": "WEB-20250218-O0O8H"
+    },
+    {
+        "purchaser": "SELLIER Camelia (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "1",
+        "trackingNumber": "WEB-20250218-0KADP"
+    },
+    {
+        "purchaser": "LANDAIS Romain (2GA)",
+        "status": "0",
+        "flowersNumber": "2",
+        "paymentStatus": "0",
+        "trackingNumber": "WEB-20250218-81JAC"
+    },
+    {
+        "purchaser": "PELTIER Fantine (1GA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "WEB-20250218-6N3FI"
+    },
+    {
+        "purchaser": "CASTEL Kenza (TGA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "0",
+        "trackingNumber": "WEB-20250218-C6JG9"
+    },
+    {
+        "purchaser": "Gilles Lazure (1GA)",
+        "status": "0",
+        "flowersNumber": "1",
+        "paymentStatus": "2",
+        "trackingNumber": "GRA-20250218-LSWVK"
+    }
+]

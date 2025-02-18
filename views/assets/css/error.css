@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css");
+
+:root {
+    --background-color: #FFF1EC;
+    --header-background-color: #FFE7DE;
+    --strong-text-color: #C54317;
+    --footer-background-color: #BF8672;
+    --accent-color: #FF9673;
+    --text-color: #ffffff78;
+    --default-text-color: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+main > section.profile {
+    position: fixed;
+    height: 40px;
+    line-height: 39px;
+    top: 10px;
+    right: 10px;
+    font-weight: 900;
+    border-radius: 70px;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+main > section.profile > img {
+    width: 36px;
+    height: 36px;
+    border-radius: 70px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+main > section.logo {
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+main > section.logo > img {
+    width: 133px;
+}
+
+main > header.missing_code {
+    height: 80px;
+    padding-top: calc(45px - 20px);
+}
+
+main > header {
+    margin-top: 40px;
+    padding-top: 30px;
+    height: 174px;
+    width: 100%;
+    color: var(--strong-text-color);
+    font-family: "Poppins", sans-serif;
+    background-color: var(--header-background-color);
+}
+
+main > header > article {
+    width: 430px;
+    text-align: left;
+    padding-left: 29px;
+    padding-right: 29px;
+    margin: auto;
+}
+
+main > header.missing_code > article {
+    text-align: center;
+    font-size: 20px;
+}
+
+main > header.error > article {
+    text-align: center;
+}
+
+main > header.error > article > i {
+    font-size: 60px;
+}
+
+main > section.form {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+} 
+
+main > section.form > input:nth-of-type(2),
+main > section.form > form > input:nth-of-type(2) {
+    margin-top: 19px;
+}
+
+main > section.form > button {
+    margin-top: 30px;
+}
+
+main > section.form > article {
+    margin-top: 20px;
+}
+
+main > section.form > article > p {
+    margin-top: 10px;
+}
+
+main > section.form > div.what_am_i {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+main > section.form > div.what_am_i > button {
+    width: 190px;
+    height: 190px;
+    transition: .3s;
+    border-radius: 17px;
+    color: var(--strong-text-color);
+    background-color: var(--header-background-color);
+}
+
+main > section.form > div.what_am_i > button > i.fas {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+main > section.form > div.what_am_i > button:hover {
+    color: var(--header-background-color);
+    background-color: var(--accent-color);
+}
+
+main > footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 127px;
+    color: var(--default-text-color);
+    padding: 35px 35px 35px 35px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic;
+    line-height: 25px;
+    background-color: var(--footer-background-color);
+}
+
+input {
+    width: 346px;
+    height: 48px;
+    border: none;
+    outline: none;
+    padding: 0px 17px;
+    border-radius: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+button {
+    width: 346px;
+    height: 48px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 70px;
+    font-weight: bolder;
+    margin: 10px 10px 10px 10px;
+    background-color: var(--accent-color);
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+a {
+    color: var(--accent-color);
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+    <main>
+        <%- include("./partials/header.ejs") %>
+        <article class="content">
+            <h2 class="welcome">
+                Bienvenue, <b><%= user.displayName %></b>
+            </h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <span>
+                        Total
+                    </span>
+                    <span id="total">
+                        0
+                    </span>
+                </div>
+                <div class="card">
+                    <span>
+                        Payée
+                    </span>
+                    <span id="paid">
+                        0
+                    </span>
+                </div>
+                <div class="card">
+                    <span>
+                        Argent Récolté
+                    </span>
+                    <span id="raised">
+                        0
+                    </span>
+                </div>
+                <div class="card">
+                    <span>
+                        Coûts
+                    </span>
+                    <span id="costs">
+                        0
+                    </span>
+                </div>
+                <div class="card">
+                    <span>
+                        Bénéfices
+                    </span>
+                    <span id="profits">
+                        0
+                    </span>
+                </div>
+            </div>
+            <button onclick="initialiazeStats()" style="width: 100%;">
+                Rafraîchir
+            </button>
+        </article>
+        <%- include("./partials/nav.ejs") %>
+    </main>
+    <script src="/assets/js/manage.js"></script>
+    <script>
+        initialiazeStats()
+        document.querySelectorAll("button.<%= page.type %>")[0].classList.add("activated")
+    </script>
+</body>
+</html>

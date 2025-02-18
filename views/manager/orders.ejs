@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+    <main>
+        <%- include("./partials/header.ejs") %>
+        <article class="content">
+            <input type="search" placeholder="Chercher une commande : NOM / PRENOM / N° DE SUIVI." id="orderSearch" onchange="searchOrder(this.value)">
+            <dialog id="orderInformation">
+                <h1 id="orderNumber">Commande : ABC-00000000-00000</h1>
+                <label for="#purchaser">
+                    Acheteur·ice·x
+                </label>
+                <input type="text" placeholder="Expéditeur·ice·x" id="purchaser" disabled>
+                <label for="#orderStatus">
+                    Status
+                </label>
+                <select id="orderStatus" name="status" onchange="this.setAttribute('data-order-edited', '')">
+                    <option value="0" selected>
+                        En stock
+                    </option>
+                    <option value="1">
+                        Distribué
+                    </option>
+                </select>
+                <label for="#orderPaymentStatus">
+                    Status du Paiement
+                </label>
+                <select id="orderPaymentStatus" name="payment" onchange="this.setAttribute('data-order-edited', '')">
+                    <option value="0">
+                        En attente de paiement
+                    </option>
+                    <option value="1">
+                        Payé
+                    </option>
+                    <option value="2">
+                        Gratuité
+                    </option>
+                </select>
+                <label class="price" for="#price" hidden>
+                    Montant à réglé
+                </label>
+                <input type="text" placeholder="0.00€" id="price" hidden disabled>
+                <br>
+                <button type="submit" onclick="updateOrder('')">
+                    Valider
+                </button>
+                <button class="delete" type="submit" onclick="deleteOrder('')">
+                    Supprimer la commande
+                </button>
+                <button onclick="closeDialog('orderInformation')" autofocus>
+                    Fermer
+                </button>
+            </dialog>
+            <div class="orders">
+                <table id="orders">
+                    <thead>
+                        <tr>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Acheteur·ice·x
+                            </th>
+                            <th>
+                                Roses
+                            </th>
+                            <th>
+                                Payement
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Non Défini
+                            </td>
+                            <td>
+                                Florentin
+                            </td>
+                            <td>
+                                -1
+                            </td>
+                            <td>
+                                -1
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <%- include("./partials/nav.ejs") %>
+    </main>
+    <script src="/assets/js/manage.js"></script>
+    <script>
+        document.querySelectorAll("button.<%= page.type %>")[0].classList.add("activated")
+        getOrders()
+    </script>
+</body>
+</html>

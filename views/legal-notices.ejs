@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <div class="legal_notices">
+            <h1>Mentions Légales</h1>
+            <section class="service_editors">
+                <h2>
+                    Éditeur du service
+                </h2>
+                <h3>
+                    <%= school.name %> 
+                </h3>
+                <address>
+                    <a href="tel:+33134900370">+33 1 34 90 03 70</a>
+                    <br>
+                    <a href="maitoto:<%= contacts.manager.mail %>"><%= contacts.manager.mail %></a>
+                </address>
+                <br>
+                <h3>
+                    Responsable de la plateforme et de l'évènement
+                </h3>
+                <p>
+                    <%= contacts.manager.name %>, <%= contacts.manager.role %>
+                </p>
+                <p>
+                    <span title="Conseil de vie Lycéenne">CVL</span> du <%= school.name %>
+                </p>
+                <br>
+                <h3>
+                    Développeur
+                </h3>
+                <p>
+                    Gilles Lazure
+                </p>
+                <br>
+                <h3>
+                    Mainteneur
+                </h3>
+                <p>
+                    <%= contacts.superAdmin.name %>
+                </p>
+            </section>
+            <br>
+            <section class="service_object">
+                <h2>
+                    Objet du service
+                </h2>
+                <p>
+                    Ce service propose aux élèves, dans le cadre de la Saint-Valentin, de commander des roses à destination de la personne de leur choix (partenaire, intérêt sentimental ou ami(e)). Les commandes peuvent être passées soit en ligne, soit directement auprès de la vie scolaire. Le règlement des commandes est obligatoire et doit être effectué exclusivement auprès de la vie scolaire
+                </p>
+            </section>
+            <br>
+            <section class="data">
+                <h2>
+                    Collecte et traitement des données personnelles
+                </h2>
+                <p>
+                    Dans le cadre de l’utilisation de ce service, certaines données personnelles sont collectées et traitées.
+                    <br>
+                    Ces données incluent :
+                </p>
+                <ol class="legal">
+                    <li class="legal">
+                        Les noms, prénoms et classes des élèves participants lorsqu’ils choisissent de ne pas rester anonymes.
+                    </li>
+                    <li class="legal">
+                        Les adresses IP des requêtes et les URL associées, afin d’assurer une traçabilité maximale.
+                    </li>    
+                </ol>
+                <h3>
+                    Finalité des données collectéess
+                </h3>
+                <p>
+                    Les données personnelles collectées sont
+                    <br>
+                    utilisées exclusivement pour :
+                </p>
+                <ul class="legal">
+                    <li class="legal">
+                        La gestion des commandes de roses et des messages associés.
+                    </li>
+                    <li class="legal">
+                        La garantie du respect des règles du service.
+                    </li>
+                </ul>
+                <p>
+                    Les adresses IP et les informations de traçabilité sont consultables uniquement par le mainteneur, <%= contacts.superAdmin.name %>, et ne peuvent être utilisées que dans le cadre de la vérification d’un manquement au règlement intérieur de l’établissement.
+                </p>
+                <h3>
+                    Droits des utilisateurs
+                </h3>
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données (RGPD), chaque utilisateur dispose des droits suivants concernant ses données personnelles :
+                </p>
+                <ul class="legal">
+                    <li class="legal">
+                        <b>Droit d’accès :</b> Demander l’accès à ses données personnelles collectées.
+                    </li>
+                    <li class="legal">
+                        <b>Droit de rectification :</b> Demander la correction ou la mise à jour de ses données personnelles.
+                    </li>
+                    <li class="legal">
+                        <b>Droit à l’effacement :</b> Demander la suppression de ses données personnelles.
+                    </li>
+                </ul>
+                <p>
+                    En cas de demande d’effacement, toutes les données liées à l’utilisateur, y compris les commandes en cours, seront définitivement supprimées du système.
+                </p>
+                <p>
+                    Pour exercer ces droits, veuillez contacter :
+                </p>
+                <ul class="legal">
+                    <li class="legal">
+                        <%= contacts.superAdmin.name  %> à cette adresse : <a href="mailto:<%= contacts.superAdmin.mail %>"><%= contacts.superAdmin.mail %></a>
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        RAPPEL
+                    </b>
+                    <br>
+                    Le <%= school.name %> dispose uniquement des droit de consultation de vos données dans le cadre de la liste des commandes, de suppression d'une commande en cas de demande explicite de l'expéditeur ainsi que de modification du status de suivi de votre commande, et ne peut en aucun cas faire exercer votre droit, c'est pourquoi il est impératif de bien contacter <%= contacts.superAdmin.name  %> dans cette situation.
+                </p>
+            </section>
+            <section class="intellectual_property">
+                <h2>
+                    Propriété intellectuelle
+                </h2>
+                <p>
+                    Tous les contenus présents sur ce service (textes, images, logos, et autres éléments graphiques) sont protégés par les lois relatives à la propriété intellectuelle. Toute reproduction, représentation ou distribution totale ou partielle de ces contenus sans autorisation préalable est strictement interdite.
+                </p>
+            </section>
+            <section class="responsability">
+                <h2>
+                    Responsabilité
+                </h2>
+                <p>
+                    Le <%= school.name %> décline toute responsabilité en cas d’erreur, d’omission ou d’interruption du service. L’utilisation de ce service se fait sous la responsabilité exclusive de l’utilisateur.                </p>
+            </section>
+            <section class="term_of_service">
+                <h2>
+                    Conditions d'utilisation
+                </h2>
+                <p>
+                    L’utilisation de ce service implique l’acceptation sans réserve des présentes mentions légales. Tout manquement aux règles établies peut entraîner des sanctions disciplinaires conformément au règlement intérieur du lycée.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

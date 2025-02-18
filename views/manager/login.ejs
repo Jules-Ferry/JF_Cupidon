@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/assets/manifest/manifest.json">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/icon.png" type="image/x-icon">
+    <meta property="og:title" content="Lycée JulesFerry · Cupidon">
+    <meta property="og:site_name" content="Lycée JulesFerry · Cupidon">
+    <meta property="og:url" content="<%= url %>">
+    <meta property="og:description" content="Site web créer pour l'évènement organisé pour la journée de la Saint-Valentin, pour la gestion des commandes de roses, des mots à envoyés ou des simples messages à transmettre (anonyme ou non).">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/img/icon.png" />
+    <meta name="theme-color" content="#eaccbf">
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+    
+    <section class="login">
+        <article class="form">
+            <img src="/assets/img/logo_panel.png" alt="">
+            <form action="/api/v1/login" method="post">
+                <input type="text" placeholder="Nom d'utilisateur" name="username" id="username">
+                <br>
+                <input type="password" placeholder="Mot de passe" name="password" id="password">
+                <br>
+                <button>
+                    CONNEXION
+                </button>
+            </form>
+        </article>
+    </section>
+
+</body>
+</html>

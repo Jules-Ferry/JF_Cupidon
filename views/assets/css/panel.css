@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css");
+
+:root {
+    --background-color: #FFF1EC;
+    --header-background-color: #FFE7DE;
+    --strong-text-color: #C54317;
+    --footer-background-color: #BF8672;
+    --accent-color: #FF9673;
+    --text-color: #ffffff78;
+    --default-text-color: #ffffff;
+    --label-background-color: #FFD7C8;
+    --odd-label-background-color: #FFE4DA;
+    --console-log-background-color: #FCDCD0;
+    --strong-color-odd: #c5431729;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #ffdbdb;
+    padding: 17px 17px 17px 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: var(--strong-text-color);
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+}
+
+main > header {
+    display: grid;
+    height: 60px;
+    text-align: center;
+    background-color: var(--header-background-color);
+}
+
+main > header > h6 {
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+main > article.content {
+    padding: 17px 17px 17px 17px;
+    overflow: auto;
+}
+
+main > article.content > div.actions {
+    text-align: center;
+}
+
+main > article.content > div.actions > button {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+main > article.content > div > p {
+    font-weight: 300;
+}
+
+main > nav {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--footer-background-color);
+}
+
+main > nav > button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background-color: transparent;
+    margin-top: 5px;
+    font-size: large;
+}
+
+main > nav > button:hover {
+    color: var(--default-text-color);
+}
+
+main > nav > button.activated {
+    color: var(--default-text-color);
+}
+
+input {
+    width: 100%;
+    border: 0px;
+    outline: none;
+    height: 36px;
+    padding-left: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    color: #fff2ec;
+    background-color: #F78E6C;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+    padding-top: 8px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 8px;
+    transition: .3s all;
+    font-size: smaller;
+    font-weight: bolder;
+    font-family: "Poppins", sans-serif;
+}
+
+h2.welcome {
+    font-weight: normal;
+    color: var(--strong-text-color);
+}
+
+dialog {
+    width: 90%;
+    border: none;
+    margin: auto;
+    outline: none;
+    text-align: center;
+    border-radius: 15px;
+    padding: 17px 17px 17px 17px;
+    background-color: var(--console-log-background-color);
+}
+
+ul.dynamic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    max-height: 120px;
+    overflow-y: auto;
+    display: none;
+    margin-top: -20px;
+}
+
+ul.dynamic-list li {
+    padding: 8px;
+    cursor: pointer;
+    color: var(--strong-text-color);
+    border-bottom: 1px solid #ddd;
+    background-color: var(--header-background-color);
+}
+
+ul.dynamic-list li:hover {
+    background-color: #f0f0f0;
+}
+
+ul.dynamic-list li:last-child {
+    border-bottom: none;
+}
+
+dialog > button {
+    width: 100%;
+}
+
+dialog > button:hover {
+    filter: brightness(110%);
+}
+
+dialog > input,
+dialog > div > input {
+    background-color: #FFF2EC;
+}
+
+dialog > h1 {
+    color: var(--strong-text-color);
+    margin-bottom: 10px;
+}
+
+dialog#orderInformation {
+    text-align: left;
+    color: var(--strong-text-color);
+}
+
+dialog#orderInformation > button {
+    background-color: var(--accent-color);
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: var(--default-text-color);
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--label-background-color);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 1em;
+    width: 100%;
+    word-break: break-all;
+    font-family: "Poppins", sans-serif;
+    color: var(--strong-text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--footer-background-color);
+    border-radius: 10px;
+}
+
+table thead {
+    background-color: var(--header-background-color);
+    color: var(--default-text-color);
+    text-align: left;
+    font-weight: bold;
+}
+
+table thead th {
+    padding: 12px 15px;
+    background-color: var(--accent-color);
+    border-bottom: 2px solid var(--footer-background-color);
+}
+
+dialog > label {
+    float: left;
+    font-size: small;
+    margin-left: 2px;
+    margin-top: 5px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: var(--strong-text-color);
+}
+
+/* tbody {
+    display: block;
+    height: 400px;
+    overflow: auto; 
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+} */
+
+table tbody tr {
+    border-bottom: 1px solid var(--footer-background-color);
+    background-color: var(--label-background-color);
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--odd-label-background-color);
+}
+
+table tbody tr:hover {
+    background-color: var(--console-log-background-color);
+}
+
+table tbody td {
+    cursor: pointer;
+    padding: 12px 15px;
+    text-align: left;
+    min-width: 146px;
+}
+
+table caption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--strong-text-color);
+    font-weight: bold;
+}
+
+div.orders {
+    overflow: auto;
+    position: absolute;
+    bottom: 70px;
+    top: 140px;
+    left: 20px;
+    right: 20px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+}
+
+div.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+div.cards > div.card {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: var(--strong-color-odd);
+}
+
+div.cards > div.card > span {
+    font-weight: 900;
+}
+
+div.cards > div.card > span:nth-of-type(1) {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+div.cards > div.card > span:nth-of-type(2) {
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    font-weight: 600;
+}
+
+button.delete {
+    background-color: #ff6347 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    border: 1px solid var(--footer-background-color);
+    background-color: var(--strong-text-color);
+    backdrop-filter: blur(250px);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff2d;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #ffffff3c;
+}
+
+[disabled] {
+    user-select: none;
+    cursor: not-allowed;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    section.login {
+        width: 100%;
+    }
+
+    section.login > article.form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+    section.login {
+        width: 100%;
+    }
+
+    section.login > article.form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+    section.login {
+        width: 100%;
+    }
+
+    section.login > article.form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    section.login {
+        width: 100%;
+    }
+
+    section.login > article.form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 779px) and (orientation: portrait) {
+    section.login {
+        width: 100%;
+    }
+
+    section.login > article.form {
+        width: 80%;
+    }
+}

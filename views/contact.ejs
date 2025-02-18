@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <div class="onboarding">
+            <article class="content">
+                <img class="thumbnail" src="./assets/img/thumbnail.png">
+                <div>
+                    <h2>Informations de contacts</h2>
+                    <br>
+                    <p>
+                        <%= school.name  %>
+                    </p>
+                    <address>
+                        <span>Courriel : <a href="mailto:<%= contacts.manager.mail %>"><%= contacts.manager.mail %></a></span>
+                        <br>
+                        <span>Téléphone : <a href="tel:<%= contacts.manager.phoneNumber.split(" ").join("") %>"><%= contacts.manager.phoneNumber %></a></span> 
+                    </address>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>

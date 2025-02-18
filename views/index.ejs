@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>JulesFerry · Cupidon</title>
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <div class="onboarding">
+            <article class="content">
+                <img class="thumbnail" src="./assets/img/thumbnail.png">
+                <div>
+                    <h2>
+                        Commander une rose
+                    </h2>
+                    <br>
+                    <p>
+                        Pour la Saint-Valentin, commandez une rose pour l'élu·e de votre coeur, ou bien votre crush du moment, tout ça directment en ligne ou via la vie scolaire. La payement devra obligatoirement s'effectuer en vie scolaire, le montant est de 3 euros par rose.
+                    </p>
+                    <button onclick="showDialog('orderRoses')">
+                        PASSER UNE COMMANDE
+                    </button>
+                    <br>
+                    <br>
+                </div>
+            </article>
+        </div>
+    </main>
+    <dialog id="orderRoses">
+        <h1>
+            Rose(s) pour la St-Valentin
+        </h1>
+        <div class="input-container">
+            <input type="text" name="purchaser" placeholder="Expéditeur·ice·x" id="purchaser">
+            <ul class="dynamic-list" id="purchaserList"></ul>
+        </div>
+        <input type="number" name="flowersNumber" id="flowersNumber" placeholder="Nombre de rose" max="5" min="1">
+        <button onclick="order()">
+            Passer la commande
+        </button>
+        <button style="background-color: tomato;" onclick="closeDialog('orderRoses')">
+            Annuler
+        </button>
+    </dialog>
+    <dialog id="orderInformation">
+        <h2>
+            Numéro de suivi
+        </h2>
+        <h3 id="trackingNumber" style="font-weight: 400;">
+            WEB-00000000-00000
+        </h3>
+        <br>
+        <h2>
+            Montant à réglé
+        </h2>
+        <h3 id="price" style="font-weight: 400;">
+            0
+        </h3>
+        <button style="background-color: tomato;" onclick="closeDialog('orderInformation')">
+            Fermer
+        </button>
+    </dialog>
+
+    <script src="./assets/js/order.js"></script>
+    <script src="./assets/js/frames.js"></script>
+</body>
+</html>
